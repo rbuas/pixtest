@@ -1,0 +1,37 @@
+{
+  "name": "pixtest",
+  "version": "0.0.1",
+  "description": "A library to compare and test images through image differential.",
+  "author": "Rodrigo Buas <rodrigobuas@gmail.com>",
+  "contributors": [
+    "Rodrigo Buas <rodrigobuas@gmail.com>"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib/ --config .eslintrc.json",
+    "prettier": "prettier --write '{lib}/**/*.js'",
+    "todo": "leasot 'lib/**/*.js' || true",
+    "quality": "yarn lint && yarn todo && yarn outdated",
+    "sonar": "sonar-scanner",
+    "test": "jest --config=jest.config.js --runInBand --coverage",
+    "test:watch": "jest --config=jest.config.js --runInBand --coverage --watchAll"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.5.0",
+    "leasot": "^6.3.0",
+    "nyc": "^12.0.2",
+    "prettier": "^1.13.6",
+    "sonar-scanner": "^3.1.0"
+  },
+  "dependencies": {
+    "jpeg-js": "^0.3.4",
+    "pixelmatch": "^4.0.2"
+  }
+}
